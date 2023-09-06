@@ -1,0 +1,14 @@
+{
+    "control" : {
+	"!std_evp_solver_type" : "lapack",
+	"!gen_evp_solver_type" : "lapack",
+	"verbosity" : 2,
+	"verification" : 1,
+	"!processing_unit" : "cpu",
+	"print_checksum" : false
+    },
+    "!iterative_solver" : {
+        "residual_tolerance" : 1e-8,
+        "#type" : "exact"
+    }
+}

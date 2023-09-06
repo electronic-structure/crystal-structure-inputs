@@ -1,0 +1,16 @@
+{
+    "control" : {
+      "verbosity" : 2
+    },
+    "iterative_solver" : {
+        "extra_ortho" : true
+    },
+    "settings" : {
+      "itsol_tol_min" : 1e-7
+    },
+    "parameters" : {
+        "precision_wf" : "fp32",
+        "precision_hs" : "fp32"
+    }
+}
+

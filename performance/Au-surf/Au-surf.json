@@ -1,0 +1,97 @@
+{
+    "data": {
+        "qe_sirius": [
+            {
+                "nodes": 6,
+                "scf_time": 121,
+                "energy": 168.476,
+                "ranks": 6,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 2,
+                "scf_time": 263,
+                "energy": 124.735,
+                "ranks": 2,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 8,
+                "scf_time": 125,
+                "energy": 215.811,
+                "ranks": 8,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 4,
+                "scf_time": 167,
+                "energy": 148.868,
+                "ranks": 4,
+                "threads_per_rank": 12
+            }
+        ],
+        "qe_develop": [
+            {
+                "nodes": 6,
+                "scf_time": 238,
+                "energy": 416.235,
+                "ranks": 72,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 8,
+                "scf_time": 202,
+                "energy": 455.348,
+                "ranks": 96,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 4,
+                "scf_time": 322,
+                "energy": 382.788,
+                "ranks": 48,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 2,
+                "scf_time": 567,
+                "energy": 353.979,
+                "ranks": 24,
+                "threads_per_rank": 3
+            }
+        ],
+        "qe_cscs_67": [
+            {
+                "nodes": 6,
+                "scf_time": 272,
+                "energy": 490.71,
+                "ranks": 72,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 8,
+                "scf_time": 231,
+                "energy": 515.535,
+                "ranks": 96,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 4,
+                "scf_time": 347,
+                "energy": 434.334,
+                "ranks": 48,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 2,
+                "scf_time": 595,
+                "energy": 381.311,
+                "ranks": 24,
+                "threads_per_rank": 3
+            }
+        ]
+    },
+    "title": "Au-surf",
+    "energy_units": "kJ",
+    "time_units": "s"
+}

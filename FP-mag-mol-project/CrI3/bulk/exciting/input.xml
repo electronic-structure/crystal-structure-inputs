@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<input>
+	<title>converted from json</title>
+	<structure speciespath="./">
+		<crystal scale="1.0">
+			<basevect>12.9370478085 0.0 0.0</basevect>
+			<basevect>6.43331520132 11.2242722145 0.0</basevect>
+			<basevect>6.46809183586 3.7478451171 12.5796436821</basevect>
+		</crystal>
+		<species rmt="2.2" speciesfile="Cr.xml">
+			<atom coord="0.333770814533 0.333771016637 0.998687081189" bfcmt="0.0  0.0  2.0"/>
+			<atom coord="0.666229185467 0.666228983363 0.00131291881123" bfcmt="0.0  0.0  2.0"/>
+		</species>
+		<species rmt="2.2" speciesfile="I.xml">
+			<atom coord="0.72699461902 0.431052400605 0.765017766248"/>
+			<atom coord="0.431053201356 0.076935060529 0.765016736703"/>
+			<atom coord="0.923067064837 0.273004132918 0.234983120588"/>
+			<atom coord="0.568946798644 0.923064939471 0.234983263297"/>
+			<atom coord="0.27300538098 0.568947599395 0.234982233752"/>
+			<atom coord="0.0769329351634 0.726995867082 0.765016879412"/>
+		</species>
+	</structure>
+	<groundstate do="fromscratch" epsengy="1e-6" gmaxvr="20.0" maxscl="100" ngridk="2 2 2" rgkmax="7.0">
+	 <spin reducebf="0.9"/>
+	<libxc correlation="XC_GGA_C_PBE" exchange="XC_GGA_X_PBE"/>
+	 </groundstate>
+</input>

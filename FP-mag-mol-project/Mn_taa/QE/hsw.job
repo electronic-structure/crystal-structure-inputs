@@ -1,0 +1,28 @@
+#!/bin/bash -l
+
+#SBATCH -A mp261
+#SBATCH -p debug
+#SBATCH -J Mn_taa_QE
+#SBATCH -C haswell
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH -o output
+#SBATCH -e error
+#SBATCH -t 0:30:00
+#SBATCH -L SCRATCH
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=dtchen@ufl.edu
+
+#OpenMP settings:
+export OMP_NUM_THREADS=1
+export OMP_PLACES=threads
+export OMP_PROC_BIND=spread
+
+module load espresso
+
+cd $SLURM_SUBMIT_DIR
+datetime=`date | awk '{printf "%3s %3d %10s", $2, $3, $4}'`
+echo $datetime "::" $SLURM_JOB_ID "::" $SLURM_SUBMIT_DIR 
+
+srun -n 32 -c 2 --cpu_bind=cores pw.x -nk 1 -nd 16 < scf.in > scf.out 
+

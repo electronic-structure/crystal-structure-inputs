@@ -1,0 +1,19 @@
+#!/bin/bash -l
+#SBATCH --job-name="test_scf"
+#SBATCH --nodes=64
+#SBATCH --time=01:00:00
+#SBATCH --account=csstaff
+#SBATCH -C mc
+
+ulimit -c unlimited
+rm core
+
+export KMP_AFFINITY='granularity=fine,compact,1'
+export MPICH_MAX_THREAD_SAFETY=multiple
+
+module load daint-mc
+module load QuantumESPRESSO/6.1.0-CrayIntel-2016.11
+
+export MKL_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+srun -n 2304 -c 1 --hint=nomultithread --unbuffered pw.x -i pw.in -ndiag 36 -npool 64

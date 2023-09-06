@@ -1,0 +1,97 @@
+{
+    "data": {
+        "qe_sirius": [
+            {
+                "nodes": 25,
+                "scf_time": 125,
+                "energy": 497.682,
+                "ranks": 25,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 9,
+                "scf_time": 235,
+                "energy": 370.566,
+                "ranks": 9,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 16,
+                "scf_time": 171,
+                "energy": 460.83,
+                "ranks": 16,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 4,
+                "scf_time": 459,
+                "energy": 333.692,
+                "ranks": 4,
+                "threads_per_rank": 12
+            }
+        ],
+        "qe_sirius_cusolver": [
+            {
+                "nodes": 25,
+                "scf_time": 107,
+                "energy": 465.208,
+                "ranks": 25,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 9,
+                "scf_time": 224,
+                "energy": 366.975,
+                "ranks": 9,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 16,
+                "scf_time": 143,
+                "energy": 432.214,
+                "ranks": 16,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 4,
+                "scf_time": 478,
+                "energy": 357.825,
+                "ranks": 4,
+                "threads_per_rank": 12
+            }
+        ],
+        "qe_cscs_67": [
+            {
+                "nodes": 25,
+                "scf_time": 319,
+                "energy": 2123.727,
+                "ranks": 100,
+                "threads_per_rank": 9
+            },
+            {
+                "nodes": 16,
+                "scf_time": 397,
+                "energy": 1732.497,
+                "ranks": 64,
+                "threads_per_rank": 9
+            },
+            {
+                "nodes": 9,
+                "scf_time": 575,
+                "energy": 1509.188,
+                "ranks": 36,
+                "threads_per_rank": 9
+            },
+            {
+                "nodes": 4,
+                "scf_time": 1304,
+                "energy": 1492.785,
+                "ranks": 16,
+                "threads_per_rank": 9
+            }
+        ]
+    },
+    "title": "Si511Ge",
+    "energy_units": "kJ",
+    "time_units": "s"
+}

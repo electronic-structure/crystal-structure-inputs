@@ -1,0 +1,2 @@
+each node contains 36 cores which are used for band parallelization on a 6 x 6 MPI grid of processors
+nodes are assigned for k-point pool parallelization

@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#SBATCH --job-name="test_scf"
+#SBATCH --nodes=4
+#SBATCH --time=00:10:00
+#SBATCH --account=csstaff
+#SBATCH -C gpu
+
+
+export MPICH_MAX_THREAD_SAFETY=multiple
+
+
+export CRAY_CUDA_MPS=0
+export MKL_NUM_THREADS=12
+export OMP_NUM_THREADS=12
+
+srun -n 4 --hint=nomultithread --unbuffered -c 12 ./sirius.scf --control.mpi_grid_dims="2:2" --control.std_evp_solver_name="lapack" --control.gen_evp_solver_name="lapack"

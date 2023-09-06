@@ -1,0 +1,67 @@
+{
+    "data": {
+        "qe_sirius": [
+            {
+                "nodes": 28,
+                "scf_time": 596,
+                "energy": 4115.141,
+                "ranks": 28,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 112,
+                "scf_time": 174,
+                "energy": 4501.525,
+                "ranks": 112,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 14,
+                "scf_time": 1164,
+                "energy": 4092.916,
+                "ranks": 14,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 56,
+                "scf_time": 316,
+                "energy": 4229.736,
+                "ranks": 56,
+                "threads_per_rank": 12
+            }
+        ],
+        "qe_66a2_cscs": [
+            {
+                "nodes": 28,
+                "scf_time": 604,
+                "energy": 3729.714,
+                "ranks": 28,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 112,
+                "scf_time": 189,
+                "energy": 4251.508,
+                "ranks": 112,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 14,
+                "scf_time": 1110,
+                "energy": 3486.83,
+                "ranks": 14,
+                "threads_per_rank": 12
+            },
+            {
+                "nodes": 56,
+                "scf_time": 334,
+                "energy": 3950.72,
+                "ranks": 56,
+                "threads_per_rank": 12
+            }
+        ]
+    },
+    "title": "ZrSi",
+    "energy_units": "kJ",
+    "time_units": "s"
+}

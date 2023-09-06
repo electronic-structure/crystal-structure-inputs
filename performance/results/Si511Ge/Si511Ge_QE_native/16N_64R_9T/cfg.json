@@ -1,0 +1,6 @@
+{
+    "control" : {
+        "std_evp_solver_type" : "cusolver",
+        "gen_evp_solver_type" : "cusolver"
+    }
+}

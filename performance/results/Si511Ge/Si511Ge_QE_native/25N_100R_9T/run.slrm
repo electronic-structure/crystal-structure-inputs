@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#SBATCH --job-name="test_scf"
+#SBATCH --nodes=25
+#SBATCH --time=0:20:00
+#SBATCH --output=slurm-stdout.txt
+#SBATCH --error=slurm-stderr.txt
+#SBATCH --account=csstaff
+#SBATCH -C mc
+MKL_NUM_THREADS=9
+OMP_NUM_THREADS=9
+srun -n 100 --hint=nomultithread --unbuffered -c 9 pw.x -i pw.in -npool 1 -ndiag 100

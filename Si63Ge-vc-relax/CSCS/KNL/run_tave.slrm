@@ -1,0 +1,17 @@
+#!/bin/bash -l
+#SBATCH --job-name="test_scf"
+#SBATCH --nodes=10
+#SBATCH --time=00:20:00
+#SBATCH --account=csstaff
+#SBATCH --constraint=cache,quad
+#SBATCH --partition=normal
+
+ulimit -c unlimited
+rm core
+
+export KMP_AFFINITY=scatter,granularity=fine,1
+export MKL_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+
+srun -n 640 -c $OMP_NUM_THREADS --unbuffered --hint=nomultithread ./pw.x -i pw.in -ndiag 64 -npool 10 -ntg 16
+

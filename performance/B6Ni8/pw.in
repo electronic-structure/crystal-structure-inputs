@@ -1,0 +1,60 @@
+&CONTROL
+  calculation = 'vc-relax'
+  etot_conv_thr =   1.4000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  max_seconds =   2.7360000000d+04
+  outdir = './'
+  prefix = 'vc_'
+  pseudo_dir = './'
+  restart_mode = 'from_scratch'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  nstep = 100
+/
+&SYSTEM
+  degauss =   1.0000000000d-02
+  ecutrho =   3.6000000000d+02
+  ecutwfc =   4.5000000000d+01
+  ibrav = 0
+  nat = 14
+  nbnd = 83
+  nspin = 1
+  ntyp = 2
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   2.8000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+&IONS
+/
+&CELL
+  press_conv_thr =   5.0000000000d-01
+/
+ATOMIC_SPECIES
+B      10.811 b_pbe_v1.4.uspp.F.UPF
+Ni     58.6934 ni_pbe_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS angstrom
+Ni           3.8442609035       2.7729760000       5.4194009420 
+Ni           4.7435253261       2.1090240000       1.6152447283 
+Ni          -0.1120541715       2.7729760000       5.9930676990 
+Ni           0.7872102512       2.1090240000       2.1889114854 
+Ni          -1.4898675309       1.2205000000       7.4858185973 
+Ni          -0.5906031083       3.6615000000       3.6816623836 
+Ni           5.2220742629       1.2205000000       3.9266500438 
+Ni           6.1213386856       3.6615000000       0.1224938301 
+B            0.7085994331       1.9967380000       4.2378300220 
+B            1.6078638558       2.8852620000       0.4336738084 
+B            3.0236072988       1.9967380000       7.1746386190 
+B            3.9228717215       2.8852620000       3.3704824053 
+B           -1.3488966340       4.4523840000       5.7062343205 
+B           -0.4496322113       0.4296160000       1.9020781068 
+K_POINTS automatic
+11 11 6 0 0 0
+CELL_PARAMETERS angstrom
+      3.2150000000       2.4410000000       0.0000000000
+     -3.2150000000       2.4410000000       0.0000000000
+     -1.7985288453       0.0000000000       7.6083124274

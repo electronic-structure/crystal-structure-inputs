@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<input>
+  <title>PbTiO3</title>
+  <structure speciespath='.'>
+    <crystal scale='7.50'>
+      <basevect> 1.0     0.0     0.0 </basevect>
+      <basevect> 0.0     1.0     0.0 </basevect>
+      <basevect> 0.0     0.0     1.0 </basevect>
+    </crystal>
+    <species speciesfile='Pb.xml' rmt='1.8' >
+      <atom coord='0.00 0.00 0.00'/>
+    </species>
+    <species speciesfile='Ti.xml' rmt='1.8' >
+      <atom coord='0.50 0.50 0.50'/>
+    </species>
+    <species speciesfile='O.xml'  rmt='1.8' >
+      <atom coord='0.50 0.50 0.00'/>
+      <atom coord='0.50 0.00 0.50'/>
+      <atom coord='0.00 0.50 0.50'/>
+    </species>
+  </structure>
+  <groundstate
+    usesirius="false"
+    ngridk='3 3 3'
+    xctype='LDA_PW'
+    maxscl='20'
+    epsengy="1d-6"
+    SymmetricKineticEnergy="true"
+
+    gmaxvr="16"
+    rgkmax="7"
+
+    lmaxmat="8"
+    lmaxapw="8"
+    lmaxvr="8"
+
+    mixer="msec"
+    beta0="0.15"
+    
+    PrelimLinSteps="1"
+
+    radialgridtype="cubic"
+    ValenceRelativity="none"
+    CoreRelativity="none"
+
+    epspot="1d-6"
+    lradstep="1"
+    fracinr="1d-12"  >
+  </groundstate>
+
+</input>

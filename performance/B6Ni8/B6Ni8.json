@@ -1,0 +1,97 @@
+{
+    "data": {
+        "qe_sirius": [
+            {
+                "nodes": 4,
+                "scf_time": 1190,
+                "energy": 941.345,
+                "ranks": 16,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 32,
+                "scf_time": 250,
+                "energy": 1413.217,
+                "ranks": 128,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 16,
+                "scf_time": 419,
+                "energy": 1193.036,
+                "ranks": 64,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 8,
+                "scf_time": 668,
+                "energy": 1038.595,
+                "ranks": 32,
+                "threads_per_rank": 3
+            }
+        ],
+        "qe_gpu_cscs_66a2": [
+            {
+                "nodes": 4,
+                "scf_time": 976,
+                "energy": 664.525,
+                "ranks": 8,
+                "threads_per_rank": 6
+            },
+            {
+                "nodes": 16,
+                "scf_time": 328,
+                "energy": 865.846,
+                "ranks": 32,
+                "threads_per_rank": 6
+            },
+            {
+                "nodes": 8,
+                "scf_time": 536,
+                "energy": 726.026,
+                "ranks": 16,
+                "threads_per_rank": 6
+            },
+            {
+                "nodes": 32,
+                "scf_time": 226,
+                "energy": 1151.045,
+                "ranks": 64,
+                "threads_per_rank": 6
+            }
+        ],
+        "qe_cscs_67": [
+            {
+                "nodes": 16,
+                "scf_time": 605,
+                "energy": 2401.069,
+                "ranks": 192,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 32,
+                "scf_time": 426,
+                "energy": 3447.84,
+                "ranks": 384,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 8,
+                "scf_time": 756,
+                "energy": 1581.91,
+                "ranks": 96,
+                "threads_per_rank": 3
+            },
+            {
+                "nodes": 4,
+                "scf_time": 1016,
+                "energy": 1180.151,
+                "ranks": 48,
+                "threads_per_rank": 3
+            }
+        ]
+    },
+    "title": "B6Ni8",
+    "energy_units": "kJ",
+    "time_units": "s"
+}

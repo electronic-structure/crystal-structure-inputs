@@ -1,0 +1,6 @@
+{
+"control" : {
+  "std_evp_solver" : "magma",
+  "gen_evp_solver" : "magma"
+}
+}

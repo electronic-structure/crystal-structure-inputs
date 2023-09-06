@@ -1,0 +1,39 @@
+&control
+calculation='vc-relax',
+restart_mode='from_scratch',
+pseudo_dir = './',
+outdir='./',
+prefix = 'scf_'
+/
+&system
+ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 400,
+occupations = 'smearing', smearing = 'gauss', degauss = 0.01,
+nat=6 ntyp=2
+/
+&electrons
+conv_thr =  1.0d-10,
+mixing_beta = 0.7,
+electron_maxstep = 100
+/
+&IONS
+ ion_dynamics='bfgs',
+/
+&CELL
+ cell_dynamics='bfgs',
+/
+ATOMIC_SPECIES
+Si 0.0 si_lda_v1.uspp.F.UPF
+O  0.0 o_lda_v1.2.uspp.F.UPF
+CELL_PARAMETERS
+        7.75600293        0.00000000        0.00000000
+        0.00000000        7.75600293        0.00000000
+        0.00000000        0.00000000        4.99208950
+ATOMIC_POSITIONS (crystal)
+Si          0.00000000         0.00000000         0.00000000
+Si          0.50000000         0.50000000         0.50000000
+O          0.30530000         0.30530000         0.00000000
+O          0.69470000         0.69470000         0.00000000
+O          0.80530000         0.19470000         0.50000000
+O          0.19470000         0.80530000         0.50000000
+K_POINTS (automatic)
+2 2 2  0 0 0

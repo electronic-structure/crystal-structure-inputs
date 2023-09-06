@@ -1,0 +1,21 @@
+#!/bin/bash -l
+#SBATCH --job-name="test_scf"
+#SBATCH --nodes=4
+#SBATCH --time=00:120:00
+#SBATCH --account=csstaff
+#SBATCH -C gpu
+
+ulimit -c unlimited
+rm core*
+
+export CRAY_CUDA_MPS=0
+
+#export KMP_AFFINITY='granularity=fine,compact,1'
+export MPICH_MAX_THREAD_SAFETY=multiple
+
+export SDDK_PRINT_PERFORMANCE=0
+export SDDK_BLOCK_SIZE=512
+
+export MKL_NUM_THREADS=10
+export OMP_NUM_THREADS=10
+srun -n 4 --ntasks-per-core=2 -c 24 --unbuffered numactl --physcpubind=13-23 /users/antonk/codes/pw.sirius.x -i pw.in -ndiag 1 -npool 4 -sirius -sirius_cfg /users/antonk/codes/config.json

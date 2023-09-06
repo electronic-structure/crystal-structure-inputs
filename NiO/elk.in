@@ -1,0 +1,31 @@
+tasks
+  2000
+
+nempty
+  20
+   
+avec
+ 1.0 0.5 0.5
+ 0.5 1.0 0.5
+ 0.5 0.5 1.0
+
+scale
+  7.89357814
+
+atoms
+   2                                    : nspecies
+ 'Ni'                                : spfname
+   2                                    : natoms; atpos, bfcmt below
+    0.0    0.0    0.0    0.0  0.0  0.1
+    0.5    0.5    0.5    0.0  0.0 -0.1
+ 'O'                                 : spfname
+   2                                    : natoms; atpos, bfcmt below
+    0.25   0.25   0.25   0.0  0.0  0.0
+    0.75   0.75   0.75   0.0  0.0  0.0
+    
+ngridk
+ 4 4 4
+
+spinpol
+ .true.
+   

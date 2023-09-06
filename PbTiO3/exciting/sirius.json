@@ -1,0 +1,9 @@
+{
+  "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PW"],
+  "mixer" :
+  {
+    "type" : "linear",
+    "beta" : 0.1,
+    "max_history" : 8
+  }
+}

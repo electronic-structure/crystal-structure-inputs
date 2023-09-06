@@ -1,0 +1,79 @@
+{
+    "control" : {
+        "!processing_unit" : "cpu",
+        "!std_evp_solver_type" : "lapack",
+        "!gen_evp_solver_type" : "lapack",
+        "verbosity" : 1,
+        "verification" : 0,
+        "print_memory_usage" : false,
+        "print_checksum" : false,
+        "mpi_grid_dims" : [1,1,1]
+    },
+
+    "parameters" : {
+        "electronic_structure_method" : "pseudopotential",
+
+        "!num_fv_states" : 8,
+
+        "xc_functionals" : ["XC_GGA_X_PBE", "XC_GGA_C_PBE"],
+
+        "smearing_width" : 0.025,
+
+        "use_symmetry" : true,
+
+        "num_mag_dims" : 0,
+        
+        "gk_cutoff" : 7.75,
+        "pw_cutoff" : 21.91,
+
+        "energy_tol" : 1e-9,
+        "potential_tol" : 1e-9,
+
+        "num_dft_iter" : 100,
+
+        "ngridk" : [7, 7, 7],
+        "!gamma_point" : false
+    },
+
+
+    "mixer" : {
+      "beta" : 0.4,
+      "type" : "broyden1",
+      "max_history" : 8
+    },
+        
+    "unit_cell" : {
+      "lattice_vectors" : [
+        [6.4675343435,       0.0000000000,       0.0000000000]
+        [0.0000000000,       6.4675343435,       0.0000000000]
+        [0.0000000000,       0.0000000000,       6.4675343435]
+      ],
+      "lattice_vectors_scale" : 1.889726125457828,
+      "atom_types" : [
+          "K", "O"
+      ],
+      "atom_files" : {
+          "K" : "K.pbe-spn-kjpaw_psl.1.0.0.UPF.json",
+          "O" : "O.pbe-n-kjpaw_psl.0.1.UPF.json"
+      },
+      "atom_coordinate_units" : "A",
+      "atoms" : {
+          "K" : [
+            [1.6168842274,       1.6168842274,       4.8506501160], 
+            [1.6168842274,       4.8506501160,       1.6168842274], 
+            [4.8506501160,       1.6168842274,       1.6168842274], 
+            [4.8506501160,       4.8506501160,       4.8506501160], 
+            [4.8506501160,       4.8506501160,       1.6168842274], 
+            [4.8506501160,       1.6168842274,       4.8506501160], 
+            [1.6168842274,       4.8506501160,       4.8506501160], 
+            [1.6168842274,       1.6168842274,       1.6168842274]
+          ],
+          "O" : [
+            [0.0000000000,       0.0000000000,       0.0000000000], 
+            [0.0000000000,       3.2337671717,       3.2337671717], 
+            [3.2337671717,       0.0000000000,       3.2337671717], 
+            [3.2337671717,       3.2337671717,       0.0000000000]
+          ]
+      }
+   }
+}

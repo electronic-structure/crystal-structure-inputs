@@ -1,0 +1,49 @@
+&CONTROL
+  calculation = 'vc-relax'
+  outdir = './out/'
+  prefix = 'CrNaO2'
+  pseudo_dir = '.'
+  restart_mode = 'from_scratch'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+  wf_collect = .false.
+/
+&SYSTEM
+  degauss =   1.0000000000d-01
+  ecutrho = 1000
+  ecutwfc = 50
+  ibrav = 0
+  nat = 4
+  ntyp = 3
+  occupations = 'smearing'
+  smearing = 'gauss'
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-11
+  diago_full_acc = .true.
+  electron_maxstep = 100
+  mixing_beta =   7.0000000000d-01
+/
+&IONS
+ ion_dynamics='bfgs',
+ upscale=1.0
+/
+&CELL
+ cell_dynamics='bfgs',
+/
+ATOMIC_SPECIES
+Cr     51.996 cr_pbe_v1.5.uspp.F.UPF
+Na     22.98977 Na_ONCV_PBE-1.0.upf
+O      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF
+ATOMIC_POSITIONS angstrom
+Cr           0.0000000000       0.0000000000       7.9895957779 
+Na           0.0000000000       0.0000000000      15.9791915558 
+O            0.0000000000       0.0000000000       3.6969440699 
+O            0.0000000000       0.0000000000      12.2822474860 
+K_POINTS automatic
+4 4 4 0 0 0
+CELL_PARAMETERS angstrom
+      1.5134940084       0.8738161732       5.3263971853
+     -1.5134940084       0.8738161732       5.3263971853
+      0.0000000000      -1.7476323464       5.3263971853

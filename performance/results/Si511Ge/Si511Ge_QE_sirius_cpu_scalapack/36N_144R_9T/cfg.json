@@ -1,0 +1,6 @@
+{
+    "control" : {
+        "std_evp_solver_type" : "scalapack",
+        "gen_evp_solver_type" : "scalapack"
+    }
+}

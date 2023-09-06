@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+  <structure speciespath="./">
+    <crystal>
+      <basevect>   5.952636865       0.000000000       0.000000000</basevect>
+      <basevect>  -2.976318433       5.155134745       0.000000000</basevect>
+      <basevect>   0.000000000       0.000000000       23.24362966</basevect>
+    </crystal>
+    <species speciesfile="Mo.xml" rmt="1.8000">
+      <atom coord="0.0000000000      0.0000000000      0.0000000000"/>
+      <atom coord="0.3333333330      0.6666666670      0.5000000000"/>
+    </species>
+    <species speciesfile="S.xml" rmt="1.8000">
+      <atom coord="0.0000000000      0.0000000000      0.3740000000"/>
+      <atom coord="0.3333333330      0.6666666670      0.1260000000"/>
+      <atom coord="0.3333333330      0.6666666670      0.8740000000"/>
+      <atom coord="0.0000000000      0.0000000000      0.6260000000"/>
+    </species>
+  </structure>
+</input>

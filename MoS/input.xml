@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input>
+
+<title>mo2 </title>
+
+<structure speciespath="./">
+<crystal scale="1.889725989">
+<basevect> 3.1500000000         0.0000000000         0.0000000000  </basevect>
+<basevect>-1.5750000000         2.7279800219         0.0000000000 </basevect>
+<basevect> 0.0000000000         0.0000000000        12.3000000000  </basevect>
+</crystal>
+<species speciesfile="Mo.xml" rmt="1.8">
+<atom coord="0.333333333         0.666666666         0.250000000" bfcmt="0 0 1"/>
+<atom coord="0.666666666         0.333333333         0.750000000" bfcmt="0 0 1"/>
+</species>
+<species speciesfile="S.xml" rmt="1.8">
+<atom coord="0.333333333         0.666666666         0.624000000"/>
+<atom coord="0.666666666         0.333333333         0.376000000"/>
+<atom coord="0.666666666         0.333333333         0.124000000"/>
+<atom coord="0.333333333         0.666666666         0.876000000"/>
+</species>
+</structure>
+
+<groundstate 
+xctype="LDA_PZ"
+rgkmax="4" 
+gmaxvr="20"
+ngridk="2 2 1"
+epsengy="1d-6"
+epspot="1d-6"
+do="fromscratch"
+lmaxmat="8"
+lmaxapw="8" 
+lmaxvr="8"
+lorecommendation="false"
+maxscl="100"
+nosym="false"
+fracinr="2d-2"
+mixer="msec"
+ValenceRelativity="none"
+CoreRelativity="none"
+usesirius="true"   
+>
+<solver type="Lapack" epsarpack="1d-15" evaltol="1d-14" />
+
+</groundstate>
+</input>
