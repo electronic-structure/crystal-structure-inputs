@@ -12,16 +12,16 @@
 
         "num_mag_dims" : 1,
 
-        "num_dft_iter" : 10,
+        "num_dft_iter" : 5,
 
         "ngridk" : [2,2,2],
 
-	"num_fv_states" : 800,
-        
+        "num_fv_states" : 800,
+
         "pw_cutoff" : 20,
 
         "aw_cutoff" : 5.8,
-        
+
         "lmax_apw" : 8,
         "lmax_pot" : 7,
         "lmax_rho" : 7,
@@ -35,7 +35,6 @@
         "type" : "anderson",
         "max_history" : 8
     },
-    
 
     "unit_cell": {
         "lattice_vectors": [
