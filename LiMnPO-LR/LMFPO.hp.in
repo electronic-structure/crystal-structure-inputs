@@ -1,0 +1,9 @@
+ &inputhp
+   prefix = 'LMFPO',
+   outdir='./tmp/'
+   nq1 = 1, nq2 = 2, nq3 = 3,
+   conv_thr_chi = 1.0d-7,
+   alpha_mix(1) = 0.1
+   iverbosity = 2
+   niter_max = 200
+ /
