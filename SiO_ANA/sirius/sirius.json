@@ -1,13 +1,11 @@
 {
     "control" : {
-        "verbosity" : 1
+        "verbosity" : 2
     },
     "parameters" : {
         "electronic_structure_method" : "pseudopotential",
 
         "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
-
-        "use_symmetry" : true,
 
         "num_mag_dims" : 0,
 
@@ -16,15 +14,9 @@
 
         "energy_tol" : 1e-8,
 
-        "num_dft_iter" : 3,
+        "num_dft_iter" : 100,
 
-        "ngridk" : [2, 2, 2],
-        "precision" : "fp32"
-    },
-
-    "iterative_solver" : {
-        "energy_tolerance" : 1e-2,
-        "residual_tolerance" : 1e-6
+        "ngridk" : [2, 2, 2]
     },
 
     "mixer" : {
