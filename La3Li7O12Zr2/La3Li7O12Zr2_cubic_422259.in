@@ -15,7 +15,7 @@
 /
 &electrons
         conv_thr = 1.0e-11,
-        mixing_beta = 0.5,
+        mixing_beta = 0.4,
         electron_maxstep = 100
 /
 

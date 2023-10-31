@@ -1,0 +1,11 @@
+&inputpp
+ outdir = './out'
+ prefix = 'perov'
+ seedname = 'CsPbBr3'
+ write_mmn = .true.
+ write_amn = .true.
+ write_unk = .false. 
+ wan_mode = 'standalone'
+ spin_component = 'up'
+/
+

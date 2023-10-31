@@ -1,0 +1,12 @@
+WORKFLOW:
+
+- sbatch submit_scf.sh
+- sbatch submit_nscf.sh
+- wannier90.x -pp CsPbBr3
+- wannier90.x -pp CsPbBr3_emp
+- sbatch submit_pw2wann.sh
+- sbatch submit_pw2wann_emp.sh
+- sbatch submit_wann.sh
+- sbatch submit_wann_emp.sh
+- sbatch submit_wann2kcw.sh
+- sbatch submit_screen.sh

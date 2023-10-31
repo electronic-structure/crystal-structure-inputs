@@ -1,5 +1,5 @@
 &CONTROL
-  calculation = 'vc-relax'
+  calculation = 'scf'
   etot_conv_thr =   1.4000000000d-04
   forc_conv_thr =   1.0000000000d-04
   max_seconds =   2.7360000000d+04

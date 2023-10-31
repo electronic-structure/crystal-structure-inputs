@@ -1,6 +1,7 @@
 {
     "control" : {
-      "verbosity" : 2
+      "verbosity" : 2,
+      "cyclic_block_size" : 512
     },
 
     "parameters" : {
@@ -12,9 +13,9 @@
 
         "num_mag_dims" : 1,
 
-        "num_dft_iter" : 5,
+        "num_dft_iter" : 1,
 
-        "ngridk" : [2,2,2],
+        "ngridk" : [1,1,1],
 
         "num_fv_states" : 800,
 
