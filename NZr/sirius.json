@@ -1,0 +1,217 @@
+{
+        "control": {
+            "beta_chunk_size": 256,
+            "beta_on_device": false,
+            "cyclic_block_size": 8,
+            "fft_mode": "parallel",
+            "gen_evp_solver_name": "lapack",
+            "gvec_chunk_size": 500000,
+            "mpi_grid_dims": [1,1],
+            "num_bands_to_print": 10,
+            "ortho_rf": false,
+            "output": "stdout:",
+            "print_forces": false,
+            "print_neighbors": true,
+            "print_stress": false,
+            "processing_unit": "cpu",
+            "reduce_gvec": true,
+            "rmt_max": 2.2,
+            "save_rf": false,
+            "spglib_tolerance": 9.999999747378752e-05,
+            "std_evp_solver_name": "lapack",
+            "use_second_variation": true,
+            "verbosity": 3,
+            "verification": 0
+        },
+        "hubbard": {
+            "constrained_calculation": false,
+            "constraint_beta_mixing": 0.4,
+            "constraint_error": 1e-06,
+            "constraint_max_iteration": 10,
+            "constraint_method": "energy",
+            "constraint_strength": 1.0,
+            "hubbard_subspace_method": "full_orthogonalization",
+            "local": [
+                {
+                    "atom_type": "Zr",
+                    "U": 3.0,
+                    "l": 2,
+                    "n": 4,
+                    "total_initial_occupancy": 4
+                }
+            ],
+            "local_constraint": [],
+            "nonlocal": [
+                {
+                    "T": [0,1,1],
+                    "V": 0.110248,
+                    "atom_pair": [0,1],
+                    "l": [2,1],
+                    "n": [4,2]
+                },
+                {
+                    "T": [1,0,1],
+                    "V": 0.110248,
+                    "atom_pair": [0,1],
+                    "l": [2,1],
+                    "n": [4,2]
+                },
+                {
+                    "T": [1,1,0],
+                    "V": 0.110248,
+                    "atom_pair": [0,1],
+                    "l": [2,1],
+                    "n": [4,2]
+                },
+                {
+                    "T": [1,1,1],
+                    "V": 0.110248,
+                    "atom_pair": [0,1],
+                    "l": [2,1],
+                    "n": [4,2]
+                },
+                {
+                    "T": [-1,-1,-1],
+                    "V": 0.110248,
+                    "atom_pair": [1,0],
+                    "l": [1,2],
+                    "n": [2,4]
+                },
+                {
+                    "T": [-1,-1,0],
+                    "V": 0.110248,
+                    "atom_pair": [1,0],
+                    "l": [1,2],
+                    "n": [2,4]
+                },
+                {
+                    "T": [-1,0,-1],
+                    "V": 0.110248,
+                    "atom_pair": [1,0],
+                    "l": [1,2],
+                    "n": [2,4]
+                },
+                {
+                    "T": [0,-1,-1],
+                    "V": 0.110248,
+                    "atom_pair": [1,0],
+                    "l": [1,2],
+                    "n": [2,4]
+                }
+            ],
+            "simplified": false
+        },
+        "iterative_solver": {
+            "converge_by_energy": 1,
+            "early_restart": 0.5,
+            "empty_states_tolerance": 0,
+            "energy_tolerance": 0.01,
+            "extra_ortho": false,
+            "init_eval_old": true,
+            "init_subspace": "lcao",
+            "locking": true,
+            "min_num_res": 0,
+            "min_occupancy": 1e-14,
+            "min_tolerance": 1e-13,
+            "num_singular": -1,
+            "num_steps": 20,
+            "relative_tolerance": 0,
+            "residual_tolerance": 1e-06,
+            "subspace_size": 2,
+            "tolerance_ratio": 0,
+            "tolerance_scale": [0.1,0.5],
+            "type": "davidson"
+        },
+        "mixer": {
+            "beta": 0.4,
+            "beta0": 0.15,
+            "beta_scaling_factor": 1.0,
+            "max_history": 8,
+            "rms_min": 1e-16,
+            "type": "anderson",
+            "use_hartree": true
+        },
+        "parameters": {
+            "auto_rmt": 1,
+            "aw_cutoff": 0.0,
+            "core_relativity": "dirac",
+            "density_tol": 1e-06,
+            "electronic_structure_method": "pseudopotential",
+            "energy_tol": 1e-06,
+            "extra_charge": 0,
+            "gamma_point": false,
+            "gk_cutoff": 10.0,
+            "hubbard_correction": true,
+            "lmax_apw": -1,
+            "lmax_pot": -1,
+            "lmax_rho": -1,
+            "molecule": false,
+            "ngridk": [6,6,6],
+            "nn_radius": -1,
+            "num_bands": 13,
+            "num_dft_iter": 100,
+            "num_fv_states": -1,
+            "num_mag_dims": 0,
+            "precision_gs": "auto",
+            "precision_hs": "fp64",
+            "precision_wf": "fp64",
+            "pw_cutoff": 20.0,
+            "reduce_aux_bf": 0,
+            "shiftk": [0,0,0],
+            "smearing": "cold",
+            "smearing_width": 0.005,
+            "so_correction": false,
+            "use_ibz": true,
+            "use_scf_correction": true,
+            "use_symmetry": false,
+            "valence_relativity": "zora",
+            "veff_pw_cutoff": 0.0,
+            "vk": [],
+            "xc_dens_tre": -1,
+            "xc_functionals": ["XC_LDA_X","XC_LDA_C_PW"]
+        },
+        "settings": {
+            "auto_enu_tol": 0,
+            "fft_grid_size": [45,45,45],
+            "fp32_to_fp64_rms": 0,
+            "nprii_aug": 20,
+            "nprii_beta": 20,
+            "nprii_rho_core": 20,
+            "nprii_vloc": 200,
+            "radial_grid": "exponential, 1.0",
+            "sht_coverage": 0,
+            "xc_use_lapl": false
+        },
+        "unit_cell": {
+            "atom_coordinate_units": "lattice",
+            "atom_files": {
+                "Zr": "Zr.json",
+                "N": "N.json"
+            },
+            "atom_types": ["Zr","N"],
+            "atoms": {
+                "Zr": [
+                    [0.75,0.7499999999999999,0.7499999999999999]
+                ],
+                "N": [
+                    [0.0,0.0,0.0]
+                ]
+            },
+            "lattice_vectors": [
+                [0.0,4.7022055159063045,4.7022055159063045],
+                [4.7022055159063045,0.0,4.7022055159063045],
+                [4.7022055159063045,4.7022055159063045,0.0]
+            ],
+            "lattice_vectors_scale": 1.0
+        },
+        "vcsqnm": {
+            "alpha0": 0.01,
+            "eps_subsp": 0.001,
+            "forces_tol": 0.0001,
+            "initial_step_size": -0.1,
+            "lattice_weight": 2.0,
+            "nhist_max": 10,
+            "num_steps": 300,
+            "stress_tol": 1e-05
+        }
+}

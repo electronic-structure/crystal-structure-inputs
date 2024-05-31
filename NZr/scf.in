@@ -28,8 +28,8 @@
   mixing_beta =   4.0000000000d-01
 /
 ATOMIC_SPECIES
-N      14.0067 N.upf
 Zr     91.224  Zr.upf
+N      14.0067 N.upf
 ATOMIC_POSITIONS angstrom
 Zr           3.7324500000       3.7324500000       3.7324500000
 N            0.0000000000       0.0000000000       0.0000000000
