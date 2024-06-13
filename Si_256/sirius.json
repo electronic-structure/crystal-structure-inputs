@@ -1,16 +1,16 @@
 {
+  "control" : {
+      "verbosity" : 2
+  },
   "parameters" : {
         "electronic_structure_method" : "pseudopotential",
         "xc_functionals" : ["XC_GGA_X_PBE", "XC_GGA_C_PBE"],
         "smearing_width" : 0.01,
-        
-        "gk_cutoff" : 6,
-        "pw_cutoff" : 20,
-        
+        "gk_cutoff" : 5.5,
+        "pw_cutoff" : 15,
         "energy_tol" : 1e-10,
-        
         "ngridk" : [1, 1, 1],
-        "gamma" : true
+        "gamma_point" : true
     },
     "unit_cell" : {
       "lattice_vectors" : [
@@ -22,7 +22,7 @@
           "Si"
       ],
       "atom_files" : {
-          "Si" : "Si.UPF"
+          "Si" : "Si.pbe-n-rrkjus_psl.1.0.0.UPF"
       },
       "atoms" : {
           "Si" : [
