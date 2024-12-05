@@ -1,0 +1,5 @@
+{
+	"iterative_solver" : {
+		"empty_states_tolerance" : 1e-5
+	}
+}
