@@ -1,5 +1,6 @@
 {
 	"iterative_solver" : {
-		"empty_states_tolerance" : 1e-5
+		"empty_states_tolerance" : 1e-5,
+		"min_tolerance" : 1e-10
 	}
 }
