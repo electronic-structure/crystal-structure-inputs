@@ -1,6 +1,8 @@
 {
     "control" : {
         "cyclic_block_size" : 256,
+        "gen_evp_solver_name" : "dlaf",
+        "std_evp_solver_name" : "dlaf",
         "verbosity" : 2
     },
 
