@@ -7,7 +7,7 @@ prefix = 'scf_',
 disk_io = 'none'
 /
 &system
-ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 400,
+ibrav=0, celldm(1)=1, ecutwfc=60, ecutrho = 800,
 occupations = 'smearing', smearing = 'gauss', degauss = 0.01
 nat=144 ntyp=2
 /

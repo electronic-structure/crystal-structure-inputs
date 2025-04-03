@@ -121,8 +121,7 @@
     ngridk="2 4 4"
     rgkmax="4.0"
     gmaxvr="16"
-    maxscl="2"
-    kptgroups="12">
+    maxscl="2">
     <sirius xc="true" vha="true" eigenstates="true" density="true" densityinit="true" />
 </groundstate>
 

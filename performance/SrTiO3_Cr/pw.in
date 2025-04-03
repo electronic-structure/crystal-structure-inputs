@@ -11,14 +11,14 @@ disk_io = 'none',
 wf_collect = false
 /
 &system
-ibrav=0, celldm(1)=1, ecutwfc=25, ecutrho = 200, nspin=2, starting_magnetization(4)=0.2
+ibrav=0, celldm(1)=1, ecutwfc=15, ecutrho = 100, nspin=2, starting_magnetization(4)=0.2
 occupations = 'smearing', smearing = 'gauss', degauss = 0.001,
 nat=1080, ntyp=4
 /
 &electrons
 conv_thr =  1.0d-8,
 mixing_beta = 0.5,
-electron_maxstep = 100
+electron_maxstep = 1
 /
 &IONS
 ion_dynamics='bfgs',

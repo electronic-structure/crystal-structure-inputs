@@ -25,7 +25,7 @@
 &ELECTRONS
   conv_thr =   2.5400000000d-08
   electron_maxstep = 500
-  mixing_beta =   4.0000000000d-01
+  mixing_beta =   0.3
 /
 ATOMIC_SPECIES
 W      183.84 W.nc.pbesol.z_14.oncvpsp4.spms.v1.upf
