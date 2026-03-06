@@ -1,0 +1,17 @@
+#!/bin/bash -l
+#SBATCH --job-name=test-power
+#SBATCH --time=00:10:00
+#SBATCH --account=csstaff
+#SBATCH --hint=nomultithread
+#SBATCH --hint=exclusive
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-core=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=12
+
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+#export SIRIUS_PRINT_MPI_LAYOUT=1
+export SIRIUS_PRINT_TIMING=3
+
+srun --cpu-bind=cores --unbuffered -c $SLURM_CPUS_PER_TASK --uenv=prgenv-gnu/25.6:v2 ~/mps-wrapper.sh /users/antonk/store/spack-recipes/dev-env/SIRIUS/.spack-env/view/bin/sirius.scf
