@@ -6,7 +6,7 @@ import subprocess
 from pathlib import Path
 from statistics import mean, stdev
 
-RE_KJ = re.compile(r"^\s*sirius\s*:\s*1\s+([0-9]+(?:\.[0-9]+)?)\s*kJ\b", re.MULTILINE)
+RE_KJ = re.compile(r"^\s*sirius\s*:\s*1\s+([0-9]+(?:\.[0-9]+)?)\s*(kJ|MJ)\b", re.MULTILINE)
 RE_S  = re.compile(r"^\s*sirius\s+1\s+([0-9]+(?:\.[0-9]+)?)\s*s\b", re.MULTILINE)
 
 def extract_suffix(json_path: Path) -> str:
@@ -57,11 +57,14 @@ def main():
             universal_newlines=True
         )
         
-        m = re.fullmatch(r"\s*([0-9]+(?:\.[0-9]+)?)K\s*", result.stdout)
+        m = re.fullmatch(r"\s*([0-9]+(?:\.[0-9]+)?)([KM])\s*", result.stdout)
         if not m:
-            raise ValueError(f"Unexpected ConsumedEnergy format: {out!r}")
+            raise ValueError(f"Unexpected ConsumedEnergy format: {result.stdout} for job {jobid}")
 	
         energy_slurm_kj = float(m.group(1))
+        if m.group(2) == "M":
+            energy_slurm_kj = energy_slurm_kj * 1000
+
 
         run_dir = base_dir / f"{key}_{suffix}"
         out_file = run_dir / f"slurm-{jobid}.out"
@@ -80,6 +83,8 @@ def main():
             continue
 
         energy_kj = float(m_kj.group(1))
+        if m_kj.group(2) == "MJ":
+           energy_kj = energy_kj * 1000 
         time_s = float(m_s.group(1))
 
         energies.append(energy_kj)

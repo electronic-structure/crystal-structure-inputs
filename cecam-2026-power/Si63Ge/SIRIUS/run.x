@@ -1,8 +1,10 @@
 #!/bin/bash
 
-export NODES=1
-export TASKSPERNODE=4
-export CPUSPERTASK=12
+NODES=$1
+TASKSPERNODE=$2
+CPUSPERTASK=$3
+
+export NODES TASKSPERNODE CPUSPERTASK
 
 suffix="${NODES}N_${TASKSPERNODE}R_${CPUSPERTASK}T"
 json_file="jobs_${suffix}.json"
